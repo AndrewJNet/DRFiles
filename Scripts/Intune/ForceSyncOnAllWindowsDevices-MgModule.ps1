@@ -4,11 +4,9 @@ Import-Module Microsoft.Graph.Authentication
 Import-Module Microsoft.Graph.DeviceManagement
 $TenantID = ""
 
-$Scopes = @(
-    "DeviceManagementManagedDevices.Read.All",
+$Scopes = @(    "DeviceManagementManagedDevices.Read.All",
     "DeviceManagementManagedDevices.ReadWrite.All",
-    "DeviceManagementManagedDevices.PrivilegedOperations.All"
-)
+    "DeviceManagementManagedDevices.PrivilegedOperations.All")
 
 $Tenant = Connect-MgGraph -TenantId $TenantID -Scopes $Scopes
 # Get all Windows Devices
